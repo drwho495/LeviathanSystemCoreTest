@@ -5,10 +5,12 @@
 #pragma once
 
 #include "wpi/framework/OpModeRobot.hpp"
+#include "Subsystems/Subsystem.h"
 
-class Robot : public wpi::OpModeRobot<Robot> {
- public:
-  Robot();
-  void DriverStationConnected() override;
-  void NonePeriodic() override;
+class ControlManager : public wpi::OpModeRobot<ControlManager> {
+	public:
+		ControlManager();
+
+		void DriverStationConnected() override;
+		void NonePeriodic() override;
 };

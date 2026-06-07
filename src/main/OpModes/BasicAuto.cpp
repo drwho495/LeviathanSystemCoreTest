@@ -4,30 +4,14 @@
 
 #include "BasicAuto.hpp"
 
-#include "Base/Robot.hpp"
-
-/** The Robot instance is passed into the opmode via the constructor. */
-MyAuto::MyAuto(Robot& robot) : robot{robot} {
-  /*
-   * Can call the base class constructor with the period to set a different
-   * periodic time interval.
-   *
-   * Additional periodic methods may be configured with AddPeriodic().
-   */
+BasicAuto::~BasicAuto() {
 }
 
-MyAuto::~MyAuto() {
-  /* Called when the opmode is de-selected. */
+void BasicAuto::Start() {
 }
 
-void MyAuto::Start() {
-  /* Called once when the robot is first enabled. */
+void BasicAuto::Periodic() {
 }
 
-void MyAuto::Periodic() {
-  /* Called periodically (set time interval) while the robot is enabled. */
-}
-
-void MyAuto::End() {
-  /* Called when the robot is disabled (after previously being enabled). */
+void BasicAuto::End() {
 }

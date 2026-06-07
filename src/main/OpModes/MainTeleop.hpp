@@ -6,18 +6,11 @@
 
 #include "wpi/opmode/PeriodicOpMode.hpp"
 
-class Robot;
-
 class MainTeleop : public wpi::PeriodicOpMode {
- public:
-  /** The Robot instance is passed into the opmode via the constructor. */
-  explicit MainTeleop(Robot& robot);
-  ~MainTeleop() override;
-  void Start() override;
-  void Periodic() override;
-  void End() override;
+	public:
+		~MainTeleop() override;
 
- private:
-  [[maybe_unused]]
-  Robot& robot;
+		void Start() override;
+		void Periodic() override;
+		void End() override;
 };

@@ -6,18 +6,11 @@
 
 #include "wpi/opmode/PeriodicOpMode.hpp"
 
-class Robot; // BOOOOOOOOOOOOOOOOOOOOOOOOOOOOO BAD BAD BAD
+class BasicAuto : public wpi::PeriodicOpMode {
+	public:
+		~BasicAuto() override;
 
-class MyAuto : public wpi::PeriodicOpMode {
- public:
-  /** The Robot instance is passed into the opmode via the constructor. */
-  explicit MyAuto(Robot& robot);
-  ~MyAuto() override;
-  void Start() override;
-  void Periodic() override;
-  void End() override;
-
- private:
-  [[maybe_unused]]
-  Robot& robot;
+		void Start() override;
+		void Periodic() override;
+		void End() override;
 };
