@@ -1,5 +1,7 @@
 #pragma once
 
-class Subsystem {
-    virtual void update() { };
+namespace Base {
+    class Subsystem {
+        virtual void update() { };
+    };
 };

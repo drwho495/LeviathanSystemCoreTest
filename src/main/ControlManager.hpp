@@ -5,7 +5,6 @@
 #pragma once
 
 #include "wpi/framework/OpModeRobot.hpp"
-#include "Subsystems/Subsystem.h"
 
 class ControlManager : public wpi::OpModeRobot<ControlManager> {
 	public:

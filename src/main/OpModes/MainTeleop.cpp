@@ -4,15 +4,17 @@
 
 #include "MainTeleop.hpp"
 
-/** The Robot instance is passed into the opmode via the constructor. */
-MainTeleop::~MainTeleop() {
-}
+namespace OpModes {
+	/** The Robot instance is passed into the opmode via the constructor. */
+	MainTeleop::~MainTeleop() {
+	}
 
-void MainTeleop::Start() {
-}
+	void MainTeleop::Start() {
+	}
 
-void MainTeleop::Periodic() {
-}
+	void MainTeleop::Periodic() {
+	}
 
-void MainTeleop::End() {
-}
+	void MainTeleop::End() {
+	}
+};

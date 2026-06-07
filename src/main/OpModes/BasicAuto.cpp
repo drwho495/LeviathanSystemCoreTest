@@ -4,14 +4,16 @@
 
 #include "BasicAuto.hpp"
 
-BasicAuto::~BasicAuto() {
-}
+namespace OpModes {
+	BasicAuto::~BasicAuto() {
+	}
 
-void BasicAuto::Start() {
-}
+	void BasicAuto::Start() {
+	}
 
-void BasicAuto::Periodic() {
-}
+	void BasicAuto::Periodic() {
+	}
 
-void BasicAuto::End() {
-}
+	void BasicAuto::End() {
+	}
+};

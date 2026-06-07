@@ -4,13 +4,18 @@
 
 #pragma once
 
+#include "Base/RobotManager.h"
 #include "wpi/opmode/PeriodicOpMode.hpp"
 
-class BasicAuto : public wpi::PeriodicOpMode {
-	public:
-		~BasicAuto() override;
+namespace OpModes {
+	class BasicAuto : public wpi::PeriodicOpMode {
+		public:
+			~BasicAuto() override;
 
-		void Start() override;
-		void Periodic() override;
-		void End() override;
+			void Start() override;
+			void Periodic() override;
+			void End() override;
+		private:
+			Base::RobotManager robot;
+	};
 };

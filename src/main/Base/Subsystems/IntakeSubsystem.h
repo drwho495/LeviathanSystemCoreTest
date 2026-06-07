@@ -3,13 +3,15 @@
 #include <rev/AbsoluteEncoder.h>
 #include "first/A301.h"
 
-class IntakeSubsystem : Subsystem {
-    public:
-        IntakeSubsystem();
+namespace Base {
+	class IntakeSubsystem : Subsystem {
+		public:
+			IntakeSubsystem();
 
-        void update() override;
+			void update() override;
 
-    private:
-        first::a301::A301 intakeMotor1 {0};
-        first::a301::A301 intakeMotor2 {1};
+		private:
+			first::a301::A301 intakeMotor1 {0};
+			first::a301::A301 intakeMotor2 {1};
+	};
 };

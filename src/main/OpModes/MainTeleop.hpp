@@ -6,11 +6,13 @@
 
 #include "wpi/opmode/PeriodicOpMode.hpp"
 
-class MainTeleop : public wpi::PeriodicOpMode {
-	public:
-		~MainTeleop() override;
+namespace OpModes {
+	class MainTeleop : public wpi::PeriodicOpMode {
+		public:
+			~MainTeleop() override;
 
-		void Start() override;
-		void Periodic() override;
-		void End() override;
+			void Start() override;
+			void Periodic() override;
+			void End() override;
+	};
 };

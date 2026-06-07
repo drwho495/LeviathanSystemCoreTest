@@ -8,25 +8,25 @@
 #include "OpModes/MainTeleop.hpp"
 
 ControlManager::ControlManager() {
-	AddOpMode<MainTeleop>(
+	AddOpMode<OpModes::MainTeleop>(
 		wpi::RobotMode::TELEOPERATED,
 		"Main Teleop",
 		"",
-		"Main Tele-operated program."
+		"Main Tele-Operated program."
 	);
 
-	AddOpMode<BasicAuto>(wpi::RobotMode::AUTONOMOUS, "Test Autonomous", "");
+	AddOpMode<OpModes::BasicAuto>(
+		wpi::RobotMode::AUTONOMOUS,
+		"Basic Autonomous",
+		""
+	);
+
 	PublishOpModes();
 }
 
-/** This function is called exactly once when the DS first connects. */
-void ControlManager::DriverStationConnected() {}
+void ControlManager::DriverStationConnected() { }
 
-/**
- * This function is called periodically anytime when no opmode is selected,
- * including when the Driver Station is disconnected.
- */
-void ControlManager::NonePeriodic() {}
+void ControlManager::NonePeriodic() { }
 
 #ifndef RUNNING_WPILIB_TESTS
 int main() {
