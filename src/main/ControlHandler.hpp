@@ -6,9 +6,9 @@
 
 #include "wpi/framework/OpModeRobot.hpp"
 
-class ControlManager : public wpi::OpModeRobot<ControlManager> {
+class ControlHandler : public wpi::OpModeRobot<ControlHandler> {
 	public:
-		ControlManager();
+		ControlHandler();
 
 		void DriverStationConnected() override;
 		void NonePeriodic() override;

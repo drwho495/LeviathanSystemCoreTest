@@ -4,6 +4,7 @@
 
 #pragma once
 
+#include "Base/RobotManager.h"
 #include "wpi/opmode/PeriodicOpMode.hpp"
 
 namespace OpModes {
@@ -14,5 +15,8 @@ namespace OpModes {
 			void Start() override;
 			void Periodic() override;
 			void End() override;
+		private:
+			Base::RobotManager robot;
+            wpi::Gamepad gamepad1 {0};
 	};
 };

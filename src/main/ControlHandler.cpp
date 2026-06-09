@@ -2,12 +2,12 @@
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
-#include "ControlManager.hpp"
+#include "ControlHandler.hpp"
 
 #include "OpModes/BasicAuto.hpp"
 #include "OpModes/MainTeleop.hpp"
 
-ControlManager::ControlManager() {
+ControlHandler::ControlHandler() {
 	AddOpMode<OpModes::MainTeleop>(
 		wpi::RobotMode::TELEOPERATED,
 		"Main Teleop",
@@ -24,12 +24,12 @@ ControlManager::ControlManager() {
 	PublishOpModes();
 }
 
-void ControlManager::DriverStationConnected() { }
+void ControlHandler::DriverStationConnected() { }
 
-void ControlManager::NonePeriodic() { }
+void ControlHandler::NonePeriodic() { }
 
 #ifndef RUNNING_WPILIB_TESTS
 int main() {
-	return wpi::StartRobot<ControlManager>();
+	return wpi::StartRobot<ControlHandler>();
 }
 #endif

@@ -1,7 +1,6 @@
+#pragma once
 #include "Subsystem.h"
-
-#include <rev/AbsoluteEncoder.h>
-#include "first/A301.h"
+#include "wpi/hal/CANBusMap.h"
 
 namespace Base {
 	class IntakeSubsystem : Subsystem {
@@ -11,7 +10,7 @@ namespace Base {
 			void update() override;
 
 		private:
-			first::a301::A301 intakeMotor1 {0};
-			first::a301::A301 intakeMotor2 {1};
+			first::a301::A301 intakeMotor1 {HAL_CANBusMap::HAL_CAN_BUS_D4};
+			// first::a301::A301 intakeMotor2 {HAL_CANBusMap::HAL_CAN_BUS_D5};
 	};
 };

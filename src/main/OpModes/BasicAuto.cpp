@@ -12,6 +12,7 @@ namespace OpModes {
 	}
 
 	void BasicAuto::Periodic() {
+		robot.update();
 	}
 
 	void BasicAuto::End() {
